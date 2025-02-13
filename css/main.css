@@ -183,3 +183,15 @@ ul.social-media-list a:hover {
 ol > li::marker {
     font-weight: bold;
   }
+
+
+
+.test-item-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.test-item-row img{
+    width: 100%;
+}
