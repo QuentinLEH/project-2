@@ -17,6 +17,10 @@ body {
     background-color: #dddddd;
     font-size: 14px;
     font-weight: light 300;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* margin: 0px; */
 }
 
 a {
@@ -194,4 +198,34 @@ ol > li::marker {
 
 .test-item-row img{
     width: 100%;
+}
+
+
+.banner {
+    background-color: #468847;
+    text-align: center;
+    padding: 8px;
+}
+
+.test-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.test-header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.img-logo {
+    width: 100px;
+}
+
+.test-column {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 20px;
 }
