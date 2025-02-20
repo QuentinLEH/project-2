@@ -225,7 +225,39 @@ ol > li::marker {
 }
 
 .test-column {
-    display: grid;
+    /*display: grid;
     grid-template-columns: 6fr 4fr;
+    gap: 20px;*/
+    display: flex;
     gap: 20px;
+    padding: 40px;
+    flex-wrap: none;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .test-column {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .test-column {
+        padding: 20px;
+    }
+}
+
+.test-column-item1 {
+    flex: 60%;
+}
+
+.test-column-item2 {
+    flex: 40%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
