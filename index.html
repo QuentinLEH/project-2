@@ -14,7 +14,6 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
@@ -23,113 +22,30 @@
 </head>
 
 <body>
-	<div class="banner">Welcome to this website</div>
-	<header class="test-header">
-		<img src="./img/face-logo.png" class="img-logo" alt="">
-		<nav>
-			<a href="">Link 1</a>
-			<a href="">Link 2</a>
-			<a href="">Link 3</a>
-			<a href="">Link 4</a>
+	<header class="header">
+		<div class="face-logo">
+			<a class="face-link" href="https://quentinleh.github.io/project-1/">
+				<img src="./img/face-logo.png" width="80px" alt="face-logo">
+			</a>
+		</div>
+		<button class="menu-toggle" aria-expanded="false" aria-controls="offcanvas-menu">Menu</button>
+    	<nav id="offcanvas-menu" class="menu">
+			<a href="">HOMEPAGE</a>
+			<a href="">CONTENT</a>
+			<a href="">CONTACT</a>
 		</nav>
 	</header>
 
 	<main>
 		<h1 id="page-title">Quentin's Blog</h1>
-		<div class="test-column">
-			<div class="test-column-item1">
-				<h2>Sub-title 1</h2>
-				<p>En 286 après J.-C., l'Empire romain fut divisé en deux, l'un oriental et l'autre occidental, chacun dirigé par son propre empereur. L'empire occidental subit plusieurs invasions gothiques et fut pillé par les Vandales en 455 après J.-C. Rome continua ensuite son déclin jusqu'en 476 après J.-C., date à laquelle l'Empire romain d'Occident prit fin.</p>
-			</div>
-			<div class="test-column-item2">
-				<h2>Sub-title 1</h2>
-				<p>En 286 après J.-C., l'Empire romain fut divisé en deux, l'un oriental et l'autre occidental, chacun dirigé par son propre empereur. L'empire occidental subit plusieurs invasions gothiques et fut pillé par les Vandales en 455 après J.-C. Rome continua ensuite son déclin jusqu'en 476 après J.-C., date à laquelle l'Empire romain d'Occident prit fin.</p>
+
+		<div class="hero">
+			<div class="hero-content">
+				<h1>Welcome to Our Website</h1>
+				<p>Discover amazing things and explore our services.</p>
+				<button>Learn More</button>
 			</div>
 		</div>
-
-
-		<div class="test-container">
-			<div class="test-item-row">
-				<div> <img src="./img/img-sqr-bite.jpg" alt=""></div>
-				<div> <img src="./img/img-sqr-bite.jpg" alt=""></div>
-				<div> <img src="./img/img-sqr-bite.jpg" alt=""></div>
-			</div>
-		</div>
-
-		<section class="container-1">
-			<div class="zone-c1">
-				<p>WELCOME TO THE</p>
-				<h2 class="top-content-c1">AMERICAN TRIP</h2>
-			</div>
-		</section>
-
-		<section class="container-2">
-			<div class="zone-c2">
-				<div class="top-content">
-					<h3>FRESH NEWS</h3>
-				</div>
-				<div class="list-c2">
-					<article class="list-item-c2">
-						<a class="link-list-c2" href="https://www.notion.com/" target="_blank">
-								<img class="img-list-c2" src="./img/img-universal.jpg" alt="day-trip-to-universal-studio-orlando">
-								<h4>DAY-TRIP // UNIVERSAL</h4>
-								<p>Here is my discovery of Universal Studio Orlando.</p>
-						</a>
-					</article>
-					<article class="list-item-c2">
-						<a class="link-list-c2" href="https://www.notion.com/" target="_blank">
-								<img class="img-list-c2" src="./img/img-ny-trip.jpg" alt="week-trip-to-new-york">
-								<h4>WEEK-TRIP // N.Y.</h4>
-								<p>Here is my week-trip to Nex York.</p>
-						</a>
-					</article>
-					<article class="list-item-c2">
-						<a class="link-list-c2" href="https://www.notion.com/" target="_blank">
-								<img class="img-list-c2" src="./img/img-sqr-bite.jpg" alt="bitten-by-a-squirrel">
-								<h4>BITTEN BY A SQUIRREL</h4>
-								<p>Danger everyone! Philadelphian squirrel are crazy.</p>
-						</a>
-					</article>
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<section class="container-3">
-			<div class="zone-c3">
-				<div class="top-content">
-					<h3>COMPLETE ARTICLES</h3>
-				</div>
-				<div class="number-list">
-					<ol>
-						<li>
-							<article>
-								<a href="https://www.notion.com/" target="_blank">
-									<h4 class="tittle-list">An unexpected detour into Texas</h4>
-									<p class="p-list">On the contrary to the pre-schedule trip, we started by going to Texas only for their BBQ and their famous brisket. And it was awesome!</p>
-								</a>
-							</article>
-						</li>
-						<li>
-							<article>
-								<a href="https://www.notion.com/" target="_blank">
-									<h4 class="tittle-list">Jackpot! American Casino, we are here</h4>
-									<p class="p-list">Despite of planing to go in a Nashville casino - they don't exist, it's illegal in Tenehesse - we tried one in Columbus and it was giant! </p>
-								</a>
-							</article>
-						</li>
-						<li>
-							<article>
-								<a href="https://www.notion.com/" target="_blank">
-									<h4 class="tittle-list">Incident in WAshington D.C. - Mayday Mayday</h4>
-									<p class="p-list">What a trip! We lived every experiences we could have, even a car crash, and in front of the White House!</p>
-								</a>
-							</article>
-						</li>
-					</ol>
-				</div>
-			</div>
-		</section>
 	</main>
 
 	<footer>

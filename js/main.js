@@ -1,20 +1,8 @@
-const idElement = document.getElementById('?');
-console.log('idElement',idElement);
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.getElementById('offcanvas-menu');
 
-const classElement = document.getElementsByClassName('?');
-console.log('classElement',classElement);
-
-const tagElement = document.getElementsByTagName('?');
-console.log('tagElement',tagElement);
-
-
-const beforePage = document.querySelector('h1');
-console.log('beforePage',beforePage);
-beforePage.textContent = 'New Content'
-
-
-const QSElement = document.querySelector('.menu');
-console.log('QSElement',QSElement);
-
-const QSAElement = document.querySelectorAll('.menu');
-console.log('QSAElement',QSAElement);
+menuToggle.addEventListener('click', () => {
+  const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+  menuToggle.setAttribute('aria-expanded',!expanded);
+  menu.classList.toggle('expanded');
+});
