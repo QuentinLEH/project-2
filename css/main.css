@@ -34,7 +34,6 @@ button:hover { /* Button style when you have your mouse on it */
 } 
 body {
     font-family: "Helvetica", sans-serif;
-    margin: 20px;
     color: #252525;
     background-color: #dddddd;
     font-size: 14px;
@@ -440,7 +439,8 @@ input:focus, select:focus, textarea:focus {
     }
     .thank-you-text { /* With the right one shared in 3 lines, adpated to the large desktop format */
         display: flex;
-        flex-direction: column
+        flex-direction: column;
+        padding-right: 80px;
     }
 }
 /* ----------------------------------------- */
