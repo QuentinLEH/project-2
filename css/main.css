@@ -127,6 +127,7 @@ button:hover { /* Button style when you have your mouse on it */
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    z-index: 25; /* Put the hamburger menu as the top layer */
 }
 .nav-container .hamburger-lines .line {
     display: block;
@@ -144,6 +145,12 @@ button:hover { /* Button style when you have your mouse on it */
 .nav-container .hamburger-lines .line3 {
     transform-origin: center;
     transition: transform 0.3s ease-in-out;
+}
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines {
+    position: fixed; /* Keep button always visible even when we are inside the slide menu */
+    top: 27px;
+    right: 20px;
+    z-index: 30; /* Put the hamburger menu as the top top layer */
 }
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
     transform: rotate(-45deg) translate(-5px, 13px);

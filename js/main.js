@@ -1,17 +1,22 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.getElementById('offcanvas-menu');
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.querySelector('.menu-items');
+const hamburger = document.querySelector('.hamburger-lines'); // Get the hamburger icon
 
-menuToggle.addEventListener('click', () => {
-  const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-  menuToggle.setAttribute('aria-expanded',!expanded);
-  menu.classList.toggle('expanded');
+menuToggle.addEventListener('change', () => {
+  if (menuToggle.checked) {
+    menu.classList.add('expanded');
+    hamburger.classList.add('fixed'); // Keep the hamburger icon inside the menu
+  } else {
+    menu.classList.remove('expanded');
+    hamburger.classList.remove('fixed'); // Reset position when closing
+  }
 });
 
+// Close menu when clicking outside
 document.addEventListener("click", function (event) {
-  let checkbox = document.getElementById("menu-toggle");
-  let menu = document.querySelector(".menu-items");
-  
-  if (!menu.contains(event.target) && !checkbox.contains(event.target)) {
-      checkbox.checked = false;
+  if (!menu.contains(event.target) && !hamburger.contains(event.target) && event.target !== menuToggle) {
+    menuToggle.checked = false;
+    menu.classList.remove('expanded');
+    hamburger.classList.remove('fixed');
   }
 });
