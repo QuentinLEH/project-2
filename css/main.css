@@ -4,6 +4,22 @@
 html { /* Scroll visual effect */
     scroll-behavior: smooth;
 }
+body {
+    font-family: "Helvetica", sans-serif;
+    color: #252525;
+    background-color: #dddddd;
+    font-size: 14px;
+    font-weight: light 300;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Technique to put the footer on the bottom of the webpage (Header/Main/Footer) */
+    min-height: 100vh /* Make the website at least as one page */
+    /* margin: 0px; */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden; /* Hide the horizontal scroll */
+}
 a { /* Link style */
     color: #468847;
     text-decoration: underline;
@@ -32,17 +48,6 @@ button:hover { /* Button style when you have your mouse on it */
     border: 2px solid #252525;
     color: #252525;
 } 
-body {
-    font-family: "Helvetica", sans-serif;
-    color: #252525;
-    background-color: #dddddd;
-    font-size: 14px;
-    font-weight: light 300;
-    display: grid;
-    grid-template-rows: auto 1fr auto; /* Technique to put the footer on the bottom of the webpage (Header/Main/Footer) */
-    min-height: 100vh /* Make the website at least as one page */
-    /* margin: 0px; */
-}
 /* ----------------------------------------- */
 
 
@@ -105,7 +110,6 @@ body {
 }
 .nav-container .checkbox {
     position: absolute;
-    width: 50px; /* Ajustement pour prendre plus d'espace */
     height: 50px;
     opacity: 0;
     cursor: pointer;
@@ -255,7 +259,7 @@ body {
     max-width: 1200px;
     text-align: center;
     font-size: 2.5vw;
-    text-shadow: 1px 1px 2px #252525ba;
+    text-shadow: 1px 1px 1px #252525ba;
 }
 .hero-button {
     font-size: 2.5vw; /* Make the Hero's button responsive */
@@ -268,11 +272,74 @@ body {
     text-align: center;
     margin: 0;
     display: inline-block;
+    letter-spacing: 0.2rem;
+}
+.hero-p {
+    color: #ffffff;
+    -webkit-text-stroke: 1px #252525ba;
+    font-weight: bold;
 }
 
 @media (min-width: 768px) { /* Make it responsive for desktops, with a new GIF format adapted for it */
     .hero {
         background-image: url('../img/hero-container-desktop.gif');
+    }
+}
+/* ----------------------------------------- */
+
+
+/* ----------------------------------------- */
+/* COMMENTS SECTION ------------------------ */
+/* ----------------------------------------- */
+.comments-container {
+    margin-top: 20px;
+}
+.comments-h2 {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+    padding: 1%;
+}
+.comments-part {
+    border: 2px solid #252525;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 16px;
+  }
+.comments-part::after {
+    content: "";
+    clear: both;
+    display: table;
+ }
+.comments-part img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 15%;
+}
+.comments-part span {
+    font-size: 2.5vw;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.comments-part p {
+    font-size: 2vw;
+    margin-right: 15px;
+}
+  
+@media (max-width: 768px) {
+    .comments-part {
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-justify: auto;
+    }
+    .comments-part img {
+        margin: auto;
+        float: none;
+        display: block;
+        justify-content: center;
+        width: 30%;
     }
 }
 /* ----------------------------------------- */
@@ -311,7 +378,6 @@ ul.social-media-list a:hover {
     display: flex;
     justify-content: center;
 }
-
 
 @media (min-width: 768px) { /* Making it adapted/responsive of the desktops */
     .sm-bar {
@@ -442,5 +508,32 @@ input:focus, select:focus, textarea:focus {
         flex-direction: column;
         padding-right: 80px;
     }
+}
+/* ----------------------------------------- */
+
+
+/* ----------------------------------------- */
+/* ABOUTE ME ------------------------------- */
+/* ----------------------------------------- */
+.about-me-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.about-me-text {
+    flex: 1 1 300px; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 300px */
+    padding: 20px;
+    line-height: 1.5rem;
+    text-justify: inter-word;
+}
+.about-me-text img {
+    width: 80%;
+    height: auto;
+}
+q {
+    font-style: italic;
+    font-weight: bold;
 }
 /* ----------------------------------------- */
